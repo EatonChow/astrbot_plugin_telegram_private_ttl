@@ -1,0 +1,26 @@
+{
+  "enabled": {
+    "description": "启用自动清理",
+    "type": "bool",
+    "default": false,
+    "hint": "只处理下方指定的 Telegram 私聊。保存后重启 AstrBot 以应用设置。"
+  },
+  "platform_id": {
+    "description": "Telegram 平台 ID",
+    "type": "string",
+    "default": "telegram",
+    "hint": "AstrBot 里 Telegram 适配器的 ID，也可在私聊发送 /sid 查看 Bot ID。"
+  },
+  "private_chat_id": {
+    "description": "允许清理的私聊 ID",
+    "type": "string",
+    "default": "",
+    "hint": "在目标 Telegram 私聊发送 /sid，填写其中的 UID（正整数）。留空不会启用清理。"
+  },
+  "ttl_seconds": {
+    "description": "消息保留时间（秒）",
+    "type": "int",
+    "default": 3600,
+    "hint": "范围 5–86400。可用 30 秒先验证，正式使用填写 3600。只影响之后登记的消息。"
+  }
+}
